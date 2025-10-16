@@ -1,0 +1,5 @@
+[wokwi]
+version = 1
+firmware = "./rpi-pico-v1.26.1.uf2"
+elf = "./rpi-pico-v1.26.1.uf2"
+rfc2217ServerPort = 4000

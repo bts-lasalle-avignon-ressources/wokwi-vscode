@@ -1,0 +1,98 @@
+{
+  "version": 1,
+  "author": "Thierry Vaira",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-arduino-uno",
+      "id": "uno",
+      "top": 0,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-mpu6050",
+      "id": "mpu1",
+      "top": 264.52,
+      "left": 96.05,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": -40.4,
+      "left": 114.65,
+      "rotate": 90,
+      "attrs": {
+        "value": "220"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led",
+      "top": -120,
+      "left": 100,
+      "attrs": {
+        "color": "green"
+      }
+    }
+  ],
+  "connections": [
+    [
+      "uno:3.3V",
+      "mpu1:VCC",
+      "red",
+      [
+        "v27",
+        "h29"
+      ]
+    ],
+    [
+      "uno:GND.2",
+      "mpu1:GND",
+      "black",
+      [
+        "v25",
+        "h66"
+      ]
+    ],
+    [
+      "uno:A5",
+      "mpu1:SCL",
+      "darkorange",
+      [
+        "v55",
+        "h-105"
+      ]
+    ],
+    [
+      "uno:A4",
+      "mpu1:SDA",
+      "yellow",
+      [
+        "v47",
+        "h-95"
+      ]
+    ],
+    [
+      "uno:GND.1",
+      "led:C",
+      "black",
+      []
+    ],
+    [
+      "r1:1",
+      "led:A",
+      "green",
+      []
+    ],
+    [
+      "uno:2",
+      "r1:2",
+      "green",
+      [
+        "h0"
+      ]
+    ]
+  ]
+}
